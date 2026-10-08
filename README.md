@@ -1,5 +1,7 @@
 # Bedroom-motion-sensor-control-with-fan-control
+
 ##Features
+
     *- Several motion sensors; "no motion" actions only run when ALL sensors are off.
     *- Lights: time window, sun elevation rule, brightness, optional ambient scene.
     *- Manual override (on/off option, no helpers needed): the last activity of each light/fan is
