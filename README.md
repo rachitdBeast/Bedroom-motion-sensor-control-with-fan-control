@@ -1,6 +1,6 @@
 # Bedroom-motion-sensor-control-with-fan-control
 
-##Features
+## Features
 
     *- Several motion sensors; "no motion" actions only run when ALL sensors are off.
     *- Lights: time window, sun elevation rule, brightness, optional ambient scene.
@@ -14,5 +14,5 @@
     *- Ceiling fan: delayed start (so a quick walk-through does not start it), soft start at a lower
       speed, extra run-on time after lights go off, and an optional minimum temperature.
 
-    Based on https://github.com/arturoliveira/home-assistant/blob/main/advanced_custom_motion_sensor.yaml
-    Requires Home Assistant 2024.10 or newer.
+### Based on https://github.com/arturoliveira/home-assistant/blob/main/advanced_custom_motion_sensor.yaml
+### Requires Home Assistant 2024.10 or newer.
