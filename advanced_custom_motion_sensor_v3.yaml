@@ -53,17 +53,6 @@ blueprint:
               unit_of_measurement: seconds
               mode: slider
               step: 1
-        brightness_level:
-          name: Brightness Level (Percentage)
-          description: Brightness to set for all lights, in percent (0-100).
-          default: 30
-          selector:
-            number:
-              min: 0
-              max: 100
-              unit_of_measurement: "%"
-              mode: slider
-              step: 1
         time_default_start:
           name: Only turn lights on after this time (Optional)
           description: Leave start and end equal (e.g. both 00:00:00) to disable the time window.
@@ -283,7 +272,6 @@ max_exceeded: silent
 variables:
   motion_entity: !input motion_entity
   light_entities: !input light_entities
-  brightness_level: !input brightness_level
   elevation: !input elevation
   elevation_adjustment: !input elevation_adjustment
   scene_ambient: !input scene_ambient
@@ -412,8 +400,6 @@ actions:
               - action: light.turn_on
                 target:
                   entity_id: "{{ lights_to_turn_on }}"
-                data:
-                  brightness_pct: "{{ brightness_level | int(30) }}"
           # Fan: delayed, optionally soft-started
           - if:
               - condition: template
